@@ -1,0 +1,46 @@
+\documentclass[a4paper]{report}
+
+\input{setup/preamble}
+\input{setup/macros}
+\input{setup/letterfonts}
+
+\addbibresource{gr.bib} 
+
+\course{Modern Linguistics}
+\me[m.fuad.rafi@gmail.com]{}
+\professor[Professor's email]{J. Hardy}
+\institute{Wabash College}
+\class{MLL 122}
+\session{Session}
+\date{Based on lectures by \profloc{J. Hardy} in 2025
+% \\ Notes created by Mubtasim Fuad 
+\\~\\ Draft updated on \today}
+
+\begin{document}
+
+\renewcommand\thepage{Title}
+\maketitle
+\renewcommand\thepage{Preface} 
+% \chapter*{Preface}  % to show preface on toc
+\input{preface}
+% \addcontentsline{toc}{chapter}{\protect\numberline{}Preface} % to show preface on toc
+\pagenumbering{gobble}
+% \pagenumbering{roman}   % to show preface on toc
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\pdfbookmark{\contentsname}{toc}              
+\setcounter{tocdepth}{0}
+\tableofcontents
+\newpage
+\pagestyle{head}
+\pagenumbering{arabic}
+
+% start lectures
+\chapter{Tue, Feb 4, 2025}
+\input{lectures/250204}
+% end lectures
+
+\input{endpage}
+
+\end{document}

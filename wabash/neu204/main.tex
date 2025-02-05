@@ -1,0 +1,48 @@
+\documentclass[a4paper]{report}
+
+\input{setup/preamble}
+\input{setup/macros}
+\input{setup/letterfonts}
+
+\addbibresource{gr.bib} 
+
+\course{Course/Topic Name}
+\professor[Professor's email]{Professor Name}
+\me[m.fuad.rafi@gmail.com]{}
+\institute{Institute Name}
+\class{Program Name}
+\session{Session}
+\date{Based on lectures by \profloc{} in 2023
+% \\ Notes created by Mubtasim Fuad 
+\\~\\ Draft updated on \today}
+
+\begin{document}
+
+\renewcommand\thepage{Title}
+\maketitle
+\renewcommand\thepage{Preface} 
+% \chapter*{Preface}  % to show preface on toc
+\input{preface}
+% \addcontentsline{toc}{chapter}{\protect\numberline{}Preface} % to show preface on toc
+\pagenumbering{gobble}
+% \pagenumbering{roman}   % to show preface on toc
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\pdfbookmark{\contentsname}{toc}              
+\setcounter{tocdepth}{0}
+\tableofcontents
+\newpage
+\pagestyle{head}
+\pagenumbering{arabic}
+
+% start lectures
+\chapter{Mon, Feb 4, 2025}
+\input{lectures/oldnotes}
+\chapter{Wed, Feb 5, 2025}
+\input{lectures/neurosciencetoday}
+% end lectures
+
+\input{endpage}
+
+\end{document}
